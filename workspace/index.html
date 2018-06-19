@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chip and Dip</title>
+	<link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="vendors/css/normalize.css">
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body ng-app="ngCribs" ng-controller="cribsController">
+	<nav>   
+          <div class="row">
+              <img src="resources/img/logo.jpg" alt="Omnifood Logo" class="logo">
+              <ul class="main-nav">
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">About Us</a> </li>
+                <li><a href="#">Products</a> </li>
+                <li><a href="#">Contact</a> </li>
+              </ul>
+          </div>
+      </nav>
+
+    <section>
+    	<div class="container">
+    	  <div class="list-group">
+    	    <a href="#" class="list-group-item">Banana Chips</a>
+          <a href="#" class="list-group-item">Tapioca Chips</a>
+          <a href="#" class="list-group-item">Potato Chips</a>
+    	  </div>
+    	  
+    		<div class="col-sm-4" ng-repeat="crib in cribs">
+    			<div class="thumbnail">
+    				<img src="{{crib.image}}.jpg" alt="">
+    				<div class="caption">
+    					<h3>{{crib.name}}</h3>
+    					<h4>{{crib.price | currency}}</h4>
+    					<button class="btn btn-xs btn-success"
+    						ng-click="showDetails">
+    						Details
+			    	  </button> 
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	
+    </section>
+   
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js">	 </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+
+<script type="text/javascript" src= "app.js"></script>
+<script type="text/javascript" src= "scripts/cribsFactory.js"></script>
+<script type="text/javascript" src= "scripts/cribsFilter.js"></script>
+<script type="text/javascript" src= " scripts/cribsController.js"></script>
+
+</html>
