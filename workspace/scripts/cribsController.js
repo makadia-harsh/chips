@@ -1,5 +1,5 @@
 angular
-	.module('ngCribs')
+	.module('myApp')
 	.controller('cribsController', function($scope, cribsFactory) {
 
 		//$scope.cribs;\
